@@ -1,0 +1,48 @@
+Table 1
+Table S1 The background information and GenBank accession numbers of all virus strains used in this study,,,,,,,,,,
+Virus,Strain,Year,Country,Location,Host,GenBank Accession Number,,,,
+,,,,,,Sge-1,Seg-2,Seg-5,Seg-9,Seg-12
+BAV,LN0689,2006,China,Liaoning,Anopheles sinensis,－,－,－,KU744435,FJ217991
+,LN0767,2007,China,Liaoning,Aedes vexans,－,－,－,KU744416,－
+,LN0776,2007,China,Liaoning,Aedes vexans,－,－,－,KU744417,－
+,LN0789,2007,China,Liaoning,Aedes vexans,－,－,－,KU744440,－
+,LN0684,2006,China,Liaoning,Anopheles sinensis,－,－,－,－,FJ217989
+,LN0764,2007,China,Liaoning,Aedes vexans,－,－,－,KU744441,－
+,NM0706,2007,China,Inner Mongolia,Culex modestus,－,－,－,KU744415,GQ331973
+,SX0765,2007,China,Shanxi,Culex pipiens pallens,－,－,－,KU744427,GQ331963
+,SX0767,2007,China,Shanxi,Aedes vexans,－,－,－,KU744433,GQ331965
+,SX0789,2007,China,Shanxi,Aedes aorsalis,－,－,－,KU744432,GQ331967
+,GS07-KD42,2006,China,Gansu,Culex tritaeniorhynchus giles,－,－,－,KU744426,－
+,GS07-KD30,2007,China,Gansu,Culex pipiens pallens,－,－,－,KU744425,GQ331960
+,GS07-KD16,2007,China,Gansu,Culex pipiens pallens,－,－,－,－,GQ331956
+,QTM104536,2013,China,Hubei,Odonata,KX884638,KX884639,KX884642,KX884646,KX884648
+,HB14-71-01,2014,China,Hubei,Anopheles sinensis,MH521264,MH521265,MH521268,MH521272,MH521275
+,SC043,2012,China,"Yunnan, Shizong",Culicoides spp.,KC954611,KC954612,KC954615,KC954619,KC954622
+,YNV/01-1,2020,China,"Yunnan, Shizong",Culicoides tainanus,OM953801,OM953802,OM953805,OM953809,OM953812
+,BAV-Ch,1987,China,"Yunnan, Banna",human,AF168005,AF134528,AY549309,AF052033,AF052030
+,113c5,2012,China,"Yunnan, Banna",Culex tritaeniorhynchus giles,MK881054,－,－,MK881062,MK881065
+,YN12243,2012,China,Yunnan,Culicoides spp.,MF124330,MF134894,－,MF141020,MF141023
+,XY31283,2018,China,Yunnan,Culex pipiens,OL700046,－,－,－,－
+,YN0659,2006,China,Yunnan,Culex tritaeniorhynchus giles,－,－,－,KU744436,FJ161965
+,MLP107,2020,China,Yunnan,Anopheles sinensis,－,－,－,－,OP858832
+,YN0558,2005,China,Yunnan,Culex tritaeniorhynchus giles,－,－,－,－,FJ161964
+,FN57,2021,China,Yunnan,Anopheles sinensis,－,－,－,－,OP858839
+,YN0556,2005,China,Yunnan,Culex tritaeniorhychus Giles,－,－,－,－,FJ161966
+,YN-6,2000,China,Yunnan,Unidentified mosquito,－,－,－,－,AY568290
+,FN134,2021,China,Yunnan,Culex tritaeniorhynchus giles,－,－,－,－,OP858840
+,MLP137-1,2020,China,Yunnan,Anopheles sinensis,－,－,－,－,OP858835
+,FN6,2021,China,Yunnan,Anopheles sinensis,－,－,－,－,OP858837
+,02VN078b,2002,Vietnam,Ha Tay,Culex tritaeniorhynchus giles,EU265695,EU265696,EU265699,EU312980,EU265705
+,02VN018b,2002,Vietnam,Quang Binh,Culex annulus,EU265683,EU265684,EU265687,EU265691,EU265694
+,02VN180b,2002,Vietnam,Quang Binh,Culex tritaeniorhynchus giles,－,－,－,－,EU265727
+,02VN178b,2002,Vietnam,Quang Binh,Culex tritaeniorhynchus giles,－,－,－,－,EU265715
+,JKT-6423,1980,Indonesian,Java,Culex psedovishnui Colless,NC 004211,NC 004217,NC 004220,NC 004202,NC 004198
+,MQ/2/Bogor,2016,Indonesian,"West Java, Bogor",Aedes albopictus,LC536090,－,－,LC536100,LC536103
+,JKT-6969,1981,Indonesian,Java,Aedes vagus,－,－,－,－,AF052008
+,JKT-7043,1981,Indonesian,Java,Culex pipiens pallens,－,－,－,－,AF052024
+Banna-like virus,Balaton/2010/HUN,2010,Hungary,Veszpre,Cyprinus carpio,JX947843,KF790697,JX947846,JX947848,JX947849
+Mangshi virus,DH13M041,2013,China,"Yunnan, Dehong",Culex tritaeniorhynchus giles,KR349187,KR349188,KR349192,KR349195,KR349197
+Kadipiro virus,JKT-7075,1981,Indonesia,Java,Culex fuscocephalus,NC 004210,NC 004212,NC 004216,NC 004205,NC 004208
+Liao ning virus,LNSV-NE97-31,1997,China,Liaoning,Aedes dorsalis,AY317099,AY317100,AY317104,AY317108,AY317109
+"""－"" indicates lack of complete ORF region sequences.",,,,,,,,,,
+,,,,,,,,,,
