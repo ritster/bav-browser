@@ -1,0 +1,16 @@
+# GenBank Accessions for our MSA Analysis (adapted from Yang ,et. al)
+Virus                                                        ,Strain           ,Year ,Country    ,Location           ,Host                          ,GenBank Accession Number ,          ,          ,
+                                                             ,                 ,     ,           ,                   ,                              ,Sge-1                    ,Seg-2     ,Seg-9     ,Seg-12
+BAV                                                          ,QTM104536        ,2013 ,China      ,Hubei              ,Odonata                       ,KX884638                 ,KX884639  ,KX884646  ,KX884648
+                                                             ,HB14-71-01       ,2014 ,China      ,Hubei              ,Anopheles sinensis            ,MH521264                 ,MH521265  ,MH521272  ,MH521275
+                                                             ,SC043            ,2012 ,China      ,"Yunnan, Shizong"  ,Culicoides spp.               ,KC954611                 ,KC954612  ,KC954619  ,KC954622
+                                                             ,YNV/01-1         ,2020 ,China      ,"Yunnan, Shizong"  ,Culicoides tainanus           ,OM953801                 ,OM953802  ,OM953809  ,OM953812
+                                                             ,BAV-Ch           ,1987 ,China      ,"Yunnan, Banna"    ,human                         ,AF168005                 ,AF134528  ,AF052033  ,AF052030
+                                                             ,YN12243          ,2012 ,China      ,Yunnan             ,Culicoides spp.               ,MF124330                 ,MF134894  ,MF141020  ,MF141023
+                                                             ,02VN078b         ,2002 ,Vietnam    ,Ha Tay             ,Culex tritaeniorhynchus giles ,EU265695                 ,EU265696  ,EU312980  ,EU265705
+                                                             ,02VN018b         ,2002 ,Vietnam    ,Quang Binh         ,Culex annulus                 ,EU265683                 ,EU265684  ,EU265691  ,EU265694
+                                                             ,JKT-6423         ,1980 ,Indonesian ,Java               ,Culex psedovishnui Colless    ,NC_004211                ,NC_004217 ,NC_004202 ,NC_004198
+Banna-like virus                                             ,Balaton/2010/HUN ,2010 ,Hungary    ,Veszpre            ,Cyprinus carpio               ,JX947843                 ,KF790697  ,JX947848  ,JX947849
+Mangshi virus                                                ,DH13M041         ,2013 ,China      ,"Yunnan, Dehong"   ,Culex tritaeniorhynchus giles ,KR349187                 ,KR349188  ,KR349195  ,KR349197
+Kadipiro virus                                               ,JKT-7075         ,1981 ,Indonesia  ,Java               ,Culex fuscocephalus           ,NC_004210                ,NC_004212 ,NC_004205 ,NC_004208
+Liao ning virus                                              ,LNSV-NE97-31     ,1997 ,China      ,Liaoning           ,Aedes dorsalis                ,AY317099                 ,AY317100  ,AY317108  ,AY317109

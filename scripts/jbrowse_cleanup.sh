@@ -7,4 +7,3 @@
 rm -rf ${APACHE_ROOT}/jbrowse2
 
 find data ! -name 'README.md' -type f -exec rm -f {} +
-find data ! -name 'data' -type d -exec rm -rf {} +

@@ -3,5 +3,6 @@
 datasets
 data/*
 !data/README.md
+!data/non-programmatic
 
 tmp*
