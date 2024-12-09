@@ -1,5 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Retrieve and process NCBI assembly data for JKT-6423, and add data to JBrowse
+
+# Handle sed version mismatch error
+vers="$(sed --version < /dev/null 2>&1 | grep -q GNU && echo gnu || echo bsd)"
+case "$vers" in
+    gnu) SED='sed -i' ;;
+    *) SED="sed -i ''"
+esac
 
 # Set default value for APACHE_ROOT if it's not already set (will only work for MacOS Silicon)
 : "${APACHE_ROOT:='/opt/homebrew/var/www'}"
@@ -32,7 +39,7 @@ for item in "${segment_records[@]}"; do
   fi
 done
 # Remove Spaces
-sed -i '' '/^$/d' "data/BAV-Ch-Annotations.gff"
+$SED '/^$/d' "data/BAV-Ch-Annotations.gff"
 
 # Process GFF Annotations for JBrowse
 declare -A map=(
@@ -50,7 +57,7 @@ declare -A map=(
     ["AF052030.1"]="seg12"
 )
 for key in "${!map[@]}"; do
-    sed -i '' "s/$key/${map[$key]}/g" "data/BAV-Ch-Annotations.gff"
+    $SED "s/$key/${map[$key]}/g" "data/BAV-Ch-Annotations.gff"
 done
 cp data/BAV-Ch-Annotations.gff tmp1.gff #TODO: remove
 jbrowse sort-gff data/BAV-Ch-Annotations.gff

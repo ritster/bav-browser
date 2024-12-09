@@ -1,5 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Retrieve and process NCBI assembly data for JKT-6423, and add data to JBrowse
+
+# Handle sed version mismatch error
+vers="$(sed --version < /dev/null 2>&1 | grep -q GNU && echo gnu || echo bsd)"
+case "$vers" in
+    gnu) SED='sed -i' ;;
+    *) SED="sed -i ''"
+esac
 
 # Set default value for APACHE_ROOT if it's not already set (will only work for MacOS Silicon)
 : "${APACHE_ROOT:='/opt/homebrew/var/www'}"
@@ -32,7 +39,7 @@ declare -A map=(
 )
 cp tmp/ncbi_dataset/data/GCF_000851685.1/genomic.gff data/KDV-JKT-7075-Annotations.gff
 for key in "${!map[@]}"; do
-    sed -i '' "s/$key/${map[$key]}/g" "data/KDV-JKT-7075-Annotations.gff"
+    $SED "s/$key/${map[$key]}/g" "data/KDV-JKT-7075-Annotations.gff"
 done
 cp data/KDV-JKT-7075-Annotations.gff tmp2.gff #TODO: remove
 jbrowse sort-gff data/KDV-JKT-7075-Annotations.gff

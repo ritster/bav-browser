@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Initial JBrowse Setup
 
 # Set default value for APACHE_ROOT if it's not already set (will only work for MacOS Silicon)
