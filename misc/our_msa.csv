@@ -1,6 +1,6 @@
 # GenBank Accessions for our MSA Analysis (adapted from Yang ,et. al)
 Virus                                                        ,Strain           ,Year ,Country    ,Location           ,Host                          ,GenBank Accession Number ,          ,          ,
-                                                             ,                 ,     ,           ,                   ,                              ,Sge-1                    ,Seg-2     ,Seg-9     ,Seg-12
+                                                             ,                 ,     ,           ,                   ,                              ,Seg-1                    ,Seg-2     ,Seg-9     ,Seg-12
 BAV                                                          ,QTM104536        ,2013 ,China      ,Hubei              ,Odonata                       ,KX884638                 ,KX884639  ,KX884646  ,KX884648
                                                              ,HB14-71-01       ,2014 ,China      ,Hubei              ,Anopheles sinensis            ,MH521264                 ,MH521265  ,MH521272  ,MH521275
                                                              ,SC043            ,2012 ,China      ,"Yunnan, Shizong"  ,Culicoides spp.               ,KC954611                 ,KC954612  ,KC954619  ,KC954622
