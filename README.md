@@ -1,5 +1,7 @@
 # bav-browser
 
+bav-browser is a JBrowse2-based genome browser for curated Banna virus (BAV) datasets. Please follow the instructions below to interact with our web-facing instance of the database or to set up your own! For a detailed description of datasets and bioinformatics analyses, please see [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md).
+
 ## Interaction via the Web
 
 Please visit ***#TODO: GitHub pages link*** to interact with a fully-installed version of the bav-browser.
@@ -21,17 +23,13 @@ If this doesn't work, visit https://docs.brew.sh/Installation for further instal
 
 #### 2.1. Node.js
 
-Node.js is a cross-platform JavaScript runtime environment that will make is easy to run JBrowse2 command-line tools.
-
-First, check whether Node.js is already installed by running the following. If node v20 is already installed, you can skip to the next step.
+Node.js is a cross-platform JavaScript runtime environment that will make is easy to run JBrowse2 command-line tools. First, check whether Node.js is already installed by running the following. If node v20 is already installed, you can skip to the next step.
 
 ```
 node -v
 ```
 
-If Node.js is not installed, install it.
-
-On macOS, you can use brew. You may need to restart the terminal (close and open a new one) to get `node -v` to run.
+If Node.js is not installed, install it. On macOS, you can use brew. You may need to restart the terminal (close and open a new one) to get `node -v` to run.
 
 ```
 # NOTE:
@@ -60,33 +58,25 @@ You can also try installing using just `npm install -g @jbrowse/cli` if the sudo
 
 #### 2.3. Other System Dependencies
 
-Install wget (if not already installed), apache2, samtools, and tabix. wget is a tool for retrieving files over widely-used Internet protocols like HTTP and FTP. apache2 allows you to run a web server on your machine. samtools and tabix are tools for processing and indexing genome and genome annotation files. seqkit<sup>1</sup> is a helpful utility for processing fasta files.
+Install wget and curl (if not already installed), apache2, samtools, tabix, and seqkit. wget is a tool for retrieving files over widely-used Internet protocols like HTTP and FTP. apache2 allows you to run a web server on your machine. samtools and tabix are tools for processing and indexing genome and genome annotation files. seqkit<sup>1</sup> is a helpful utility for processing fasta files.
 
-```
+```bash
 # note that apache2 gets installed as httpd for macOS, which is the service you will launch later
-brew install wget httpd samtools htslib seqkit
+brew install curl wget httpd samtools htslib seqkit
 ```
 
 #### 2.4 NCBI Executables
 
-Install a datasets, a helpful NCBI utility for interacting with their databases. The following MacOS instructions are summarized from [here](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/). For installation on Linux/Windows systems, please consult the aforementioned link.
+Install datasets, a helpful [NCBI](https://www.ncbi.nlm.nih.gov/) utility for interacting with their databases. The following MacOS instructions are summarized from [here](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/). For installation on Linux/Windows systems, please consult the aforementioned link.
 
 ```bash
 curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/datasets'
 chmod +x datasets # you may need to run `sudo chmod +x datasets`
 ```
 
-### 3. Web Server + JBrowse Setup
+### 3. Web Server + JBrowse2 Setup
 
-#### 3.1 apache2 Server Setup
-
-Finally, it's time to get the local JBrowse instance up and running! To start the web server, run this command: 
-
-```bash
-sudo brew services start httpd
-```
-
-#### 3.2 Verify apache2 Server Folder
+#### 3.1 Verify apache2 Server Folder
 
 For MacOS installations using brew, the apache server folder will likely be in `/opt/homebrew/var/www` (for M1) or `/usr/local/var/www` (for Intel). You can run `brew --prefix` to get the brew install location, and then from there it is in the `var/www` folder. Take note of what the folder is, and use the command below to store it as a command-line variable. We can reference this variable in the rest of our code, to save on typing. You will need to re-run the export if you restart your terminal session!
 
@@ -95,20 +85,28 @@ For MacOS installations using brew, the apache server folder will likely be in `
 export APACHE_ROOT='/path/to/rootdir'
 ```
 
-For local hosting, the url to your running web server will be http://localhost:8080/. If you open a browser window to this URL, you should now see the message "It works!".
+#### 3.2 JBrowse2 Initialization
 
-#### 3.3 JBrowse Initialization
-
-To initialize the JBrowse file system (where we'll store our genomes, annotations, etc. for the browser), run the following command:
+To initialize the JBrowse2 file system (where we'll store our genomes, annotations, etc. for the browser), run the following command:
 
 ```bash
 chmod +x scripts/jbrowse_init.sh # you may need to run `sudo chmod +x scripts/jbrowse_init.sh`
 ./scripts/jbrowse_init.sh
 ```
 
+#### 3.3 apache2 Server Setup
+
+Finally, it's time to get the local JBrowse2 instance up and running! To start the web server, run this command: 
+
+```bash
+sudo brew services start httpd
+```
+For local hosting, the url to your running web server will be http://localhost:8080/. If you open a browser window to this URL, you should now see the message "It works!". Further, if you go to http://localhost:8080/jbrowse2/, you should see the words "It worked!" with a green box underneath saying "JBrowse 2 is installed." with some additional details.
+
+
 ### 4. Datasets + Bioinformatics Work
 
-Follow the command line instructions found at ***#TODO: add link to datasets markdown file in github***
+Follow the command line instructions found at [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md) to retrieve and install all datasets used in the bav-browser database.
 
 ### 5. You're Done!
 
@@ -117,13 +115,13 @@ With your local copy of the bav-browser database fully set up, it's time to inte
 When you are done with your local copy of the bav-browser, run the following commands to clean up your file system and shut down the apache2 web server:
 
 ```bash
+sudo brew services stop httpd
 chmod +x scripts/jbrowse_cleanup.sh # you may need to run `sudo chmod +x scripts/jbrowse_cleanup.sh`
 ./scripts/jbrowse_cleanup.sh
-sudo brew services stop httpd
 ```
 
 ### Citations (Computational Tools)
 
 1. Wei Shen*, Botond Sipos, and Liuyang Zhao. 2024. SeqKit2: A Swiss Army Knife for Sequence and Alignment Processing. iMeta e191. doi:10.1002/imt2.191
 
-***#TODO: get citations for whatever we can tool-wise***
+***#TODO: get citations for all bioinformatics tools used***
