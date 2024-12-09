@@ -90,7 +90,6 @@ export APACHE_ROOT='/path/to/rootdir'
 To initialize the JBrowse2 file system (where we'll store our genomes, annotations, etc. for the browser), run the following command:
 
 ```bash
-chmod +x scripts/jbrowse_init.sh # you may need to run `sudo chmod +x scripts/jbrowse_init.sh`
 ./scripts/jbrowse_init.sh
 ```
 
@@ -116,6 +115,5 @@ When you are done with your local copy of the bav-browser, run the following com
 
 ```bash
 sudo brew services stop httpd
-chmod +x scripts/jbrowse_cleanup.sh # you may need to run `sudo chmod +x scripts/jbrowse_cleanup.sh`
 ./scripts/jbrowse_cleanup.sh
 ```
