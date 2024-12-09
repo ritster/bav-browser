@@ -19,7 +19,7 @@ rm -rf ncbi_dataset.zip
 # Process Genome FASTA for JBrowse
 sed -E 's/^>NC_[^ ]+ .*segment ([0-9]+),.*/>seg\1/' "tmp/ncbi_dataset/data/GCF_000858185.1/GCF_000858185.1_ViralMultiSegProj15178_genomic.fna" > "data/JKT-6423-Genome.fa"
 samtools faidx data/JKT-6423-Genome.fa
-jbrowse add-assembly data/JKT-6423-Genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-assembly data/JKT-6423-Genome.fa --name "JKT-6423" --out $APACHE_ROOT/jbrowse2 --load copy
 
 # Process GFF Annotations for JBrowse
 declare -A map=(
@@ -44,7 +44,7 @@ cp data/JKT-6423-Annotations.gff tmp0.gff #TODO: remove
 jbrowse sort-gff data/JKT-6423-Annotations.gff
 bgzip data/JKT-6423-Annotations.gff
 tabix data/JKT-6423-Annotations.gff.gz
-jbrowse add-track data/JKT-6423-Annotations.gff.gz -a "JKT-6423-Genome" --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-track data/JKT-6423-Annotations.gff.gz -a "JKT-6423" --out $APACHE_ROOT/jbrowse2 --load copy
 
 # Allow Searching by Genes in JBrowse
 jbrowse text-index --out $APACHE_ROOT/jbrowse2

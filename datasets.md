@@ -16,7 +16,7 @@ GenBank Assembly: GCA_000858185.1
 
 NCBI (RefSeq) Segment Accessions (in order): NC_004211.1, 	NC_004217.1, 	NC_004218.1, 	NC_004219.1, 	NC_004220.1, 	NC_004221.1,    NC_004204.1, 	NC_004203.1, 	NC_004202.1, 	NC_004201.1, 	NC_004200.1, 	NC_004198.1
 
-The first Bannavirus Genome was sequenced in 2000 (H Attoui, et al.). ***#TODO: explanation***
+The first Banna virus genome was sequenced in 2000 (H Attoui, et al.). ***#TODO: explanation***
 
 ![JKT-6423 JBrowse View](images/JKT-6423-view.png)
 
@@ -35,7 +35,7 @@ For the rest of this database setup guide we'll reference the upper instruction,
 
 ### Another Full Banna Virus Genome (Alternate Strain - BAV-Ch): 
 
-[Dataset URL (BAV-Ch)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_023156985.1/)
+[Paper URL](https://pubmed.ncbi.nlm.nih.gov/15784909/) | [Dataset URL (BAV-Ch)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_023156985.1/)
 
 GenBank Assembly: GCA_023156985.1
 
@@ -49,6 +49,8 @@ To include this sequence in your copy of the database:
 ```bash
 bash ./scripts/bav-ch.sh
 ```
+
+**Note:** The BAV-Ch assembly does not have complete .gff (or any other format) annotations. As a result, this script must separately download the .gff annotations for each virus segment and concatenate them into one genome-wide annotation file.
 
 ### Comparison to Kadipiro Virus
 
@@ -72,9 +74,11 @@ bash ./scripts/kdv_jkt_7075.sh
 ***#TODO: syntenty view? some alignment view, at least***
 
 
-### MSA Analysis of Least Conserved Segments
+### MSA Analysis of Most and Least Conserved Segments
 
 [Paper URL](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/) | [Dataset URL ()]()
+
+
 
 ### Vietnam/China virus clustering?
 
@@ -85,7 +89,18 @@ bash ./scripts/kdv_jkt_7075.sh
 
 [Paper URL](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/) | [Dataset URL ()]()
 
-### Citations (Datasets)
+### Challenges and Future Work
+
+***#TODO: complete lack of annotations for segments*** - future analysis with BLAST searches for similar virus proteins with real annotations, conserved protein domain study for better protein function information
+
+### Citations (Papers/Datasets)
 
 1. 
 2. 
+
+### Citations (Computational Tools)
+
+1. Wei Shen*, Botond Sipos, and Liuyang Zhao. 2024. SeqKit2: A Swiss Army Knife for Sequence and Alignment Processing. iMeta e191. doi:10.1002/imt2.191
+2. Li, H. (2018). Minimap2: pairwise alignment for nucleotide sequences. Bioinformatics, 34:3094-3100. doi:10.1093/bioinformatics/bty191
+
+3. 

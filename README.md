@@ -58,11 +58,11 @@ You can also try installing using just `npm install -g @jbrowse/cli` if the sudo
 
 #### 2.3. Other System Dependencies
 
-Install wget and curl (if not already installed), apache2, samtools, tabix, and seqkit. wget is a tool for retrieving files over widely-used Internet protocols like HTTP and FTP. apache2 allows you to run a web server on your machine. samtools and tabix are tools for processing and indexing genome and genome annotation files. seqkit<sup>1</sup> is a helpful utility for processing fasta files.
+Install wget and curl (if not already installed), apache2, samtools, tabix, and seqkit. wget is a tool for retrieving files over widely-used Internet protocols like HTTP and FTP. apache2 allows you to run a web server on your machine. samtools and tabix are tools for processing and indexing genome and genome annotation files. seqkit and minimap2 are helpful tools for genome processing and alignment.
 
 ```bash
 # note that apache2 gets installed as httpd for macOS, which is the service you will launch later
-brew install curl wget httpd samtools htslib seqkit
+brew install curl wget httpd samtools htslib seqkit minimap2
 ```
 
 #### 2.4 NCBI Executables
@@ -119,9 +119,3 @@ sudo brew services stop httpd
 chmod +x scripts/jbrowse_cleanup.sh # you may need to run `sudo chmod +x scripts/jbrowse_cleanup.sh`
 ./scripts/jbrowse_cleanup.sh
 ```
-
-### Citations (Computational Tools)
-
-1. Wei Shen*, Botond Sipos, and Liuyang Zhao. 2024. SeqKit2: A Swiss Army Knife for Sequence and Alignment Processing. iMeta e191. doi:10.1002/imt2.191
-
-***#TODO: get citations for all bioinformatics tools used***

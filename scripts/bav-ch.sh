@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Retrieve and process NCBI assembly data for JKT-6423, and add data to JBrowse
+# Retrieve and process NCBI assembly data for BAV-Ch, and add data to JBrowse
 
 # Handle sed version mismatch error
 vers="$(sed --version < /dev/null 2>&1 | grep -q GNU && echo gnu || echo bsd)"
@@ -19,7 +19,7 @@ rm -rf ncbi_dataset.zip
 # Process Genome FASTA for JBrowse
 sed -E 's/^>([^ ]+).*segment ([0-9]+).*$/>seg\2/' "tmp/ncbi_dataset/data/GCA_023156985.1/GCA_023156985.1_ASM2315698v1_genomic.fna" > "data/BAV-Ch-Genome.fa"
 samtools faidx data/BAV-Ch-Genome.fa
-jbrowse add-assembly data/BAV-Ch-Genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-assembly data/BAV-Ch-Genome.fa --name "BAV-Ch" --out $APACHE_ROOT/jbrowse2 --load copy
 
 # Retrieve Individual Segment Records
 declare -a segment_records=("AF168005.1" "AF134526.1" "AY549307.1" "AY549308.1" "AY549309.1" "AF168006.1" "AF052035.1" "AF052034.1" "AF052033.1" "AF052032.1" "AF052031.1" "AF052030.1")
@@ -63,7 +63,7 @@ cp data/BAV-Ch-Annotations.gff tmp1.gff #TODO: remove
 jbrowse sort-gff data/BAV-Ch-Annotations.gff
 bgzip data/BAV-Ch-Annotations.gff
 tabix data/BAV-Ch-Annotations.gff.gz
-jbrowse add-track data/BAV-Ch-Annotations.gff.gz -a "BAV-Ch-Genome" --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-track data/BAV-Ch-Annotations.gff.gz -a "BAV-Ch" --out $APACHE_ROOT/jbrowse2 --load copy
 
 # Allow Searching by Genes in JBrowse
 jbrowse text-index --out $APACHE_ROOT/jbrowse2

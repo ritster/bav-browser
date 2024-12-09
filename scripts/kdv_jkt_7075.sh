@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Retrieve and process NCBI assembly data for JKT-6423, and add data to JBrowse
+# Retrieve and process NCBI assembly data for KDV-JKT-7075, and add data to JBrowse
 
 # Handle sed version mismatch error
 vers="$(sed --version < /dev/null 2>&1 | grep -q GNU && echo gnu || echo bsd)"
@@ -20,7 +20,7 @@ rm -rf ncbi_dataset.zip
 sed -E 's/^>NC_[^ ]+ .*segment ([0-9]+),.*/>seg\1/' "tmp/ncbi_dataset/data/GCF_000851685.1/GCF_000851685.1_ViralMultiSegProj14858_genomic.fna" > "tmp/KDV-JKT-7075-Genome.fa"
 seqkit sort -lr tmp/KDV-JKT-7075-Genome.fa -o data/KDV-JKT-7075-Genome.fa
 samtools faidx data/KDV-JKT-7075-Genome.fa
-jbrowse add-assembly data/KDV-JKT-7075-Genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-assembly data/KDV-JKT-7075-Genome.fa --name "KDV-JKT-7075" --out $APACHE_ROOT/jbrowse2 --load copy
 
 # Process GFF Annotations for JBrowse
 declare -A map=(
@@ -45,7 +45,7 @@ cp data/KDV-JKT-7075-Annotations.gff tmp2.gff #TODO: remove
 jbrowse sort-gff data/KDV-JKT-7075-Annotations.gff
 bgzip data/KDV-JKT-7075-Annotations.gff
 tabix data/KDV-JKT-7075-Annotations.gff.gz
-jbrowse add-track data/KDV-JKT-7075-Annotations.gff.gz -a "KDV-JKT-7075-Genome" --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-track data/KDV-JKT-7075-Annotations.gff.gz -a "KDV-JKT-7075" --out $APACHE_ROOT/jbrowse2 --load copy
 
 ## Allow Searching by Genes in JBrowse
 jbrowse text-index --out $APACHE_ROOT/jbrowse2
