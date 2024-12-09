@@ -26,17 +26,18 @@ export INITIAL_CONFIG=\
 }'
 echo $INITIAL_CONFIG > $APACHE_ROOT/jbrowse2/config.json
 
-## Plugins
-## note: can't seem to install plugins in this way - "Error: Failed to load https://unpkg.com/jbrowse-plugin-msaview/dist/jbrowse-plugin-msaview.umd.production.min.js"
-#jq '. + {
-#  "plugins": [
-#    {
-#      "name": "MsaView",
-#      "url": "https://unpkg.com/jbrowse-plugin-msaview/dist/jbrowse-plugin-msaview.umd.production.min.js"
-#    },
-#    {
-#      "name": "Protein3d",
-#      "url": "https://unpkg.com/jbrowse-plugin-protein3d/dist/jbrowse-plugin-protein3d.umd.production.min.js"
-#    }
-#  ]
-#}' $APACHE_ROOT/jbrowse2/config.json > tmp.json && mv tmp.json $APACHE_ROOT/jbrowse2/config.json
+# Plugins
+# (OLD ERROR): can't seem to install plugins in this way - "Error: Failed to load https://unpkg.com/jbrowse-plugin-msaview/dist/jbrowse-plugin-msaview.umd.production.min.js"
+#   error occurred because the unpkg repository was down
+jq '. + {
+  "plugins": [
+    {
+      "name": "MsaView",
+      "url": "https://unpkg.com/jbrowse-plugin-msaview/dist/jbrowse-plugin-msaview.umd.production.min.js"
+    },
+    {
+      "name": "Protein3d",
+      "url": "https://unpkg.com/jbrowse-plugin-protein3d/dist/jbrowse-plugin-protein3d.umd.production.min.js"
+    }
+  ]
+}' $APACHE_ROOT/jbrowse2/config.json > tmp.json && mv tmp.json $APACHE_ROOT/jbrowse2/config.json

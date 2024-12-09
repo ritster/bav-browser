@@ -6,4 +6,4 @@
 
 rm -rf ${APACHE_ROOT}/jbrowse2
 
-find data ! -name 'README.md' -type f -exec rm -f {} +
+find data ! -name 'README.md' -type f -not -path 'data/non-programmatic/*' -exec rm -f {} +
