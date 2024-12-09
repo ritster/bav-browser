@@ -59,7 +59,8 @@ declare -A map=(
 for key in "${!map[@]}"; do
     "${SED[@]}" "s/$key/${map[$key]}/g" "data/BAV-Ch-Annotations.gff"
 done
-cp data/BAV-Ch-Annotations.gff tmp1.gff #TODO: remove
+# uncomment the following line to save the final gff file to a temporary file
+#cp data/BAV-Ch-Annotations.gff tmp1.gff 
 jbrowse sort-gff data/BAV-Ch-Annotations.gff
 bgzip data/BAV-Ch-Annotations.gff
 tabix data/BAV-Ch-Annotations.gff.gz

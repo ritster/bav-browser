@@ -41,7 +41,8 @@ cp tmp/ncbi_dataset/data/GCF_000851685.1/genomic.gff data/KDV-JKT-7075-Annotatio
 for key in "${!map[@]}"; do
     "${SED[@]}" "s/$key/${map[$key]}/g" "data/KDV-JKT-7075-Annotations.gff"
 done
-cp data/KDV-JKT-7075-Annotations.gff tmp2.gff #TODO: remove
+# uncomment the following line to save the final gff file to a temporary file
+#cp data/KDV-JKT-7075-Annotations.gff tmp2.gff
 jbrowse sort-gff data/KDV-JKT-7075-Annotations.gff
 bgzip data/KDV-JKT-7075-Annotations.gff
 tabix data/KDV-JKT-7075-Annotations.gff.gz
