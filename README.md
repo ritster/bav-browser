@@ -1,14 +1,22 @@
 # bav-browser
 
-bav-browser is a JBrowse2-based genome browser for curated Banna virus (BAV) datasets. Please follow the instructions below to interact with our web-facing instance of the database or to set up your own! For a detailed description of datasets and bioinformatics analyses, please see [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md).
+bav-browser is a JBrowse2-based genome browser for curated Banna virus (BAV) datasets. Please follow the instructions below to interact with our web-facing instance of the database or to set up your own!
 
 ## Interaction via the Web
 
-Please visit ***#TODO: GitHub pages link*** to interact with a fully-installed version of the bav-browser.
+Please visit ***#TODO: GitHub pages link*** to interact with a fully-installed version of the bav-browser. For a detailed description of datasets and bioinformatics analyses, please see [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md). For files relating to MSA ***#TODO: or protein view?*** views, please clone this repository (see "0. Clone this GitHub Repository") or download the relevant files in `analyses/` directly from the GitHub UI.
 
 ## Installing a Local Copy of the Database
 
 The following instructions are adapted from the [JBrowse2 Lab Setup Guide](https://github.com/bioe131/lab_8_fa24/blob/main/README.md) for BioE 131 at UC Berkeley Fall 2024-25. This adaptation is <ins>primarily for MacOS users</ins>, so please reference the aforementioned setup guide if you are installing a local copy of the database on Windows or Linux systems.
+
+### 0. Clone This GitHub Repository
+
+```bash
+git clone https://github.com/ritster/bav-browser.git
+cd bav-browser
+```
+
 
 ### 1. Homebrew Installation
 
