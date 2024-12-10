@@ -102,9 +102,7 @@ All bioinformatics analysis done in the section was done with the [Clustal Omega
 
 #### Navigation Instructions
 
-For all views shown below, launch the MsaView plugin from the JBrowse homescreen (locally, http://{your_localhost_url}/jbrowse2/, or on the web, )
-
-***TODO: local instructions***
+For all views shown below, launch the MsaView plugin from the JBrowse homescreen (locally, http://{your_localhost_url}/jbrowse2/). From there, choose an appropriate MSA and/or tree file by clicking "File" then "Choose File" as described in the specific section.
 
 ### Nucleotide Sequence Conservation
 
@@ -113,7 +111,7 @@ For all views shown below, launch the MsaView plugin from the JBrowse homescreen
 
 #### Navigation Instructions
 
-***TODO: local instructions***
+Select a nucleotide MSA alignment file from `analyses/clustal_omega/`, e.g. `analyses/clustal_omega/msa_seg1_nucleotide.aln-clustal_num`. Then, click "Open".
 
 ### Viral Clustering
 
@@ -124,7 +122,7 @@ Link: [Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
 
 #### Navigation Instructions
 
-***TODO: local instructions***
+Select both a nucleotide MSA alignment file from `analyses/clustal_omega/` and the corresponding pylogenetic tree file, e.g. for `analyses/clustal_omega/msa_seg1_nucleotide.aln-clustal_num`, also select `analyses/clustal_omega/phylo_seg1_nucleotide.phylotree`. Then, click "Open".
 
 ### Protein Sequence Conservation
 
@@ -133,7 +131,7 @@ Link: [Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
 
 #### Navigation Instructions
 
-***TODO: local instructions***
+Select a protein MSA alignment file from `analyses/clustal_omega/`, e.g. `analyses/clustal_omega/msa_seg1_protein.aln-clustal_num`. Optionally, also select the corresponding phylogenetic tree file, e.g. `analyses/clustal_omega/phylo_seg1_protein.phylotree`. Then, click "Open".
 
 ### Protein Domain Search
 
@@ -142,7 +140,7 @@ Link: [Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
 
 #### Navigation Instructions
 
-***TODO: local instructions***
+Follow the instructions in the previous section, then click on the "hamburger" menu in the top left corner of the white section of the track. Hover over "Features/protein domains", then click "Query InterProScan for domains...". Running this step may take a few minutes.
 
 ## Challenges and Future Work
 
