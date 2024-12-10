@@ -4,6 +4,8 @@ Banna virus (BAV), classified under the genus Seadornavirus within the family Re
 
 This browser also includes select Banna-like viruses from the Reoviridae family. The reference genome of the Kadipiro virus (KDV) was incorporated due to its notable similarity to BAV. Indeed, the identification of these viral similarities led to the reclassification of both viruses into a new genus, Seadornavirus, within the Reoviridae family<sup>1</sup>. Additionally, specific viral segments (1, 2, 9, and 12) from 13 viruses (9 BAV and 4 BAV-like) are included, as outlined in `misc/our_msa.csv`. These segments were selected based on data availability and their representation as the most and least conserved genes across the viral strains studied<sup>3</sup>.
 
+**NOTE:** The instructions below each view shown below are for local copies of the database, but to get to the same views in the web version, simply navigate to https://ibrah121.github.io/jbrowse2/, then follow the instructions as written. 
+
 **<ins>IMPORTANT NOTE:</ins>** Please install dependencies and set environment variables as described in the README (see "Installing a Local Copy of the Database") before running any of the shell scripts associated with these data.
 
 ## The Reference (and First Sequenced) Banna Virus Genome: JKT-6423
@@ -24,13 +26,9 @@ To include this genome assembly in your copy of the database:
 ![JKT-6423 JBrowse View](images/JKT-6423-view.png)
 *The BAV reference genome (JKT-6423), viewed using JBrowse2 in bav-browser.*
 
-The first Banna virus genome was sequenced in 2000 (H Attoui, et al.). ***#TODO: explanation***
-
 #### Navigation Instructions
 
-To see a similar view in the bav-browser (local copy), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "JKT-6423" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
-
-***TODO: web instructions***
+To see a similar view in the bav-browser (local install), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "JKT-6423" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
 
 ## Another Full Banna Virus Genome (Alternate Strain - BAV-Ch): 
 
@@ -50,13 +48,9 @@ To include this genome assembly in your copy of the database:
 ![BAV-Ch JBrowse View](images/BAV-Ch-view.png)
 *An alternate strain of BAV (BAV-Ch), viewed using JBrowse2 in bav-browser.*
 
-***#TODO: explanation***
-
 #### Navigation Instructions
 
-To see a similar view in the bav-browser (local copy), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "BAV-Ch" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
-
-***TODO: web instructions***
+To see a similar view in the bav-browser (local install), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "BAV-Ch" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
 
 ## BAV Virus Genome Comparison (Synteny View)
 
@@ -70,13 +64,9 @@ To include the data for the synteny view in your copy of the database:
 ![JKT-6423 vs. BAV-Ch JBrowse Synteny View](images/JKT-6423-vs-BAV-Ch-view.png)
 *A comparison of viral alignment between two strains of BAV (JKT-6423 and BAV-Ch), viewed using JBrowse2 in bav-browser.*
 
-***#TODO: explanation***
-
 #### Navigation Instructions
 
-To see a similar view in the bav-browser (local copy), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear synteny view", then click "Launch View". Select "JKT-6423" in the "Row 1 Assembly" drop-down menu, select "BAV-Ch" in the Row 2 Assembly drop-down menu, then click "Launch".
-
-***TODO: web instructions***
+To see a similar view in the bav-browser (local install), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear synteny view", then click "Launch View". Select "JKT-6423" in the "Row 1 Assembly" drop-down menu, select "BAV-Ch" in the Row 2 Assembly drop-down menu, then click "Launch".
 
 ## Comparison to Kadipiro Virus
 
@@ -96,13 +86,9 @@ To include this genome assembly in your copy of the database:
 ![KDV JBrowse View](images/KDV-JKT-7075-view.png)
 *An alternate strain of BAV (BAV-Ch), viewed using JBrowse2 in bav-browser.*
 
-***#TODO: explanation***
-
 #### Navigation Instructions
 
-To see a similar view in the bav-browser (local copy), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "KDV-JKT-7075" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
-
-***TODO: web instructions***
+To see a similar view in the bav-browser (local install), navigate to http://{your_localhost_url}/jbrowse2/ and click "Empty" under the header "Start a New Session". Ensure the view you are about to launch is the "Linear genome view", then click "Launch View". Select "KDV-JKT-7075" under the "Assembly" drop-down menu, and choose the segment that you want to view in the search bar and click "Open" (or alternatively, just press "Show All Regions in Assembly" to view all segments in one view).
 
 Note: A deeper analysis of segment similarities between both BAV strains and KDV can be found in the next section.
 
@@ -112,65 +98,51 @@ Link: [Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
 
 The data used in this section was all sourced from [NCBI](https://www.ncbi.nlm.nih.gov/nuccore/), and the particular accession codes used can be found in `\misc\our_msa.csv`. In order to not hammer the NCBI database with 100+ requests per instance of this browser, all the data has been pre-retrieved and can be found at `data/non-programmatic/`.
 
-All bioinformatics analysis done in the section was done with the Clustal Omega tool<sup>7</sup>. To see how the original data files (individual segment nucleotide and protein FASTA files) were processed into a form usable by Clustal Omega, see `msa_data.sh`.
+All bioinformatics analysis done in the section was done with the [Clustal Omega tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo)<sup>7</sup>. To see how the original data files (individual segment nucleotide and protein FASTA files) were processed into a form usable by Clustal Omega, see `msa_data.sh`.
+
+#### Navigation Instructions
+
+For all views shown below, launch the MsaView plugin from the JBrowse homescreen (locally, http://{your_localhost_url}/jbrowse2/, or on the web, )
+
+***TODO: local instructions***
 
 ### Nucleotide Sequence Conservation
 
 ![Segment 1 Nucleotide MSA View](images/seg1_nuc_msa-view.png)
-*A multiple sequence alignment (MSA) for the segment 1 nucleotide sequence, viewed using JBrowse2 in bav-browser.*
-
-***#TODO: explanation***
+*A multiple sequence alignment (MSA) for the segment 1 nucleotide sequences, viewed using JBrowse2 in bav-browser.*
 
 #### Navigation Instructions
 
 ***TODO: local instructions***
-
-***TODO: web instructions***
 
 ### Viral Clustering
 
 Link: [Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
 
 ![Segment 9 Nucleotide MSA + Phylogenetic Tree View](images/seg9_nuc_msa_phylo-view.png)
-*A multiple sequence alignment (MSA) for the segment 9 nucleotide sequence with a phylogenetic tree ordering/clustering, viewed using JBrowse2 in bav-browser.*
-
-***#TODO: explanation***
+*A multiple sequence alignment (MSA) for the segment 9 nucleotide sequences with a phylogenetic tree ordering/clustering, viewed using JBrowse2 in bav-browser.*
 
 #### Navigation Instructions
 
 ***TODO: local instructions***
-
-***TODO: web instructions***
 
 ### Protein Sequence Conservation
 
 ![Segment 2 Protein MSA View](images/seg2_prot_msa-view.png)
-*A multiple sequence alignment (MSA) for the segment 2 protein sequence, viewed using JBrowse2 in bav-browser.*
-
-***#TODO: explanation***
+*A multiple sequence alignment (MSA) for the segment 2 protein sequences, viewed using JBrowse2 in bav-browser.*
 
 #### Navigation Instructions
 
 ***TODO: local instructions***
-
-***TODO: web instructions***
 
 ### Protein Domain Search
 
 ![Segment 12 Protein Domain MSA View](images/seg12_prot_msa_domain-view.png)
-*A multiple sequence alignment (MSA) for the segment 12 protein sequence with protein domains shown, viewed using JBrowse2 in bav-browser.*
-
-***#TODO: explanation***
+*A multiple sequence alignment (MSA) for the segment 12 protein sequences with protein domains shown, viewed using JBrowse2 in bav-browser.*
 
 #### Navigation Instructions
 
 ***TODO: local instructions***
-
-***TODO: web instructions***
-
-## Protein Structures
-
-Link: [Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
 
 ## Challenges and Future Work
 

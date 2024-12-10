@@ -4,7 +4,7 @@ bav-browser is a JBrowse2-based genome browser for curated Banna virus (BAV) dat
 
 ## Interaction via the Web
 
-Please visit ***#TODO: GitHub pages link*** to interact with a fully-installed version of the bav-browser. For a detailed description of datasets and bioinformatics analyses, please see [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md). For files relating to MSA or protein views, please clone this repository (see "0. Clone this GitHub Repository") or download the relevant files in `analyses/` directly from the GitHub UI.
+Please visit [this link](https://ibrah121.github.io/) to interact with a fully-installed version of the bav-browser. For a detailed description of datasets and bioinformatics analyses, please see [datasets.md](https://github.com/ritster/bav-browser/blob/main/datasets.md). For files relating to MSA views, please also clone this repository (see "0. Clone this GitHub Repository") or download the relevant files in `analyses/` directly from the GitHub UI.
 
 ## Installing a Local Copy of the Database
 
