@@ -2,7 +2,7 @@
 
 Banna virus (BAV), classified under the genus Seadornavirus within the family Reoviridae, possesses a genome comprising 12 segments of double-stranded RNA (dsRNA), encoding a mix of structural and non-structural proteins. The total genome length is approximately 21 kb, with conserved terminal sequences that assist in genomic packaging and replication. First identified in Xishuangbanna, Yunnan Province, China, in 1987, BAV is transmitted by blood-sucking arthropods like mosquitoes, midges, and ticks. It infects a wide range of hosts, including humans, cattle, and swine, and has been associated with viral encephalitis and febrile illnesses. Its distribution spans Southeast Asia, with isolations from China, Vietnam, and Indonesia, highlighting its potential as a zoonotic pathogen.
 
-Also included in this browser are select Banna-like viruses also from the family Reoviridae. We included the Kadipiro virus (KDV) reference genome for its similarity to BAV - in fact, the discovery of these viral similarities prompted the reassignment of these two viruses to a new genus (Seadornavirus) within the family Reoviridae<sup>1</sup>. Also included are select viral segments (1, 2, 9, and 12) from 13 viruses (9 BAV, 4 BAV-like) as described in ```misc/our_msa.csv```. These particular segments were selected 
+This browser also includes select Banna-like viruses from the Reoviridae family. The reference genome of the Kadipiro virus (KDV) was incorporated due to its notable similarity to BAV. Indeed, the identification of these viral similarities led to the reclassification of both viruses into a new genus, Seadornavirus, within the Reoviridae family<sup>1</sup>. Additionally, specific viral segments (1, 2, 9, and 12) from 13 viruses (9 BAV and 4 BAV-like) are included, as outlined in `misc/our_msa.csv`. These segments were selected based on data availability and their representation as the most and least conserved genes across the viral strains studied<sup>3</sup>.
 
 **<ins>IMPORTANT NOTE:</ins>** Please install dependencies and set environment variables as described in the README (see "Installing a Local Copy of the Database") before running any of the shell scripts associated with these data.
 
@@ -104,30 +104,77 @@ To see a similar view in the bav-browser (local copy), navigate to http://{your_
 
 ***TODO: web instructions***
 
-Note: A deeper analysis of segment similarities between both 
+Note: A deeper analysis of segment similarities between both BAV strains and KDV can be found in the next section.
 
 ## Genomic Conservation Across Strains and Species
 
-[Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
+Link: [Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
 
-The data used in this section was all sourced from [NCBI](https://www.ncbi.nlm.nih.gov/nuccore/), and the particular accession codes used can be found in `\misc\our_msa.csv`.
+The data used in this section was all sourced from [NCBI](https://www.ncbi.nlm.nih.gov/nuccore/), and the particular accession codes used can be found in `\misc\our_msa.csv`. In order to not hammer the NCBI database with 100+ requests per instance of this browser, all the data has been pre-retrieved and can be found at `data/non-programmatic/`.
+
+All bioinformatics analysis done in the section was done with the Clustal Omega tool<sup>7</sup>. To see how the original data files (individual segment nucleotide and protein FASTA files) were processed into a form usable by Clustal Omega, see `msa_data.sh`.
 
 ### Nucleotide Sequence Conservation
 
+![Segment 1 Nucleotide MSA View](images/seg1_nuc_msa-view.png)
+*A multiple sequence alignment (MSA) for the segment 1 nucleotide sequence, viewed using JBrowse2 in bav-browser.*
+
+***#TODO: explanation***
+
+#### Navigation Instructions
+
+***TODO: local instructions***
+
+***TODO: web instructions***
+
+### Viral Clustering
+
+Link: [Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
+
+![Segment 9 Nucleotide MSA + Phylogenetic Tree View](images/seg9_nuc_msa_phylo-view.png)
+*A multiple sequence alignment (MSA) for the segment 9 nucleotide sequence with a phylogenetic tree ordering/clustering, viewed using JBrowse2 in bav-browser.*
+
+***#TODO: explanation***
+
+#### Navigation Instructions
+
+***TODO: local instructions***
+
+***TODO: web instructions***
+
 ### Protein Sequence Conservation
 
-## Viral Clustering
+![Segment 2 Protein MSA View](images/seg2_prot_msa-view.png)
+*A multiple sequence alignment (MSA) for the segment 2 protein sequence, viewed using JBrowse2 in bav-browser.*
 
-[Paper<sup>4</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600385/)
+***#TODO: explanation***
 
+#### Navigation Instructions
+
+***TODO: local instructions***
+
+***TODO: web instructions***
+
+### Protein Domain Search
+
+![Segment 12 Protein Domain MSA View](images/seg12_prot_msa_domain-view.png)
+*A multiple sequence alignment (MSA) for the segment 12 protein sequence with protein domains shown, viewed using JBrowse2 in bav-browser.*
+
+***#TODO: explanation***
+
+#### Navigation Instructions
+
+***TODO: local instructions***
+
+***TODO: web instructions***
 
 ## Protein Structures
 
-[Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
+Link: [Paper<sup>3</sup>](https://pmc.ncbi.nlm.nih.gov/articles/PMC10687475/)
 
 ## Challenges and Future Work
 
-***#TODO: complete lack of annotations for segments*** - future analysis with BLAST searches for similar virus proteins with real annotations, conserved protein domain study for better protein function information
+A significant challenge in the development of this browser came from the absence of comprehensive genome annotations for BAV segments. Notably, limited information exists regarding the functional roles of many BAV proteins beyond the identification of open reading frames (ORFs). This highlights an opportunity for the creation of more detailed annotations, including insights into protein functions, conserved domains, and other structural features. Future analyses could employ BLAST searches to identify homologous protein domains in better-characterized viral genomes, utilizing either existing annotations or well-established functional data.
 
 ## Citations
 
@@ -145,5 +192,3 @@ The data used in this section was all sourced from [NCBI](https://www.ncbi.nlm.n
 7. Sievers F, Wilm A, Dineen D, Gibson TJ, Karplus K, Li W, Lopez R, McWilliam H, Remmert M, Söding J, Thompson JD, Higgins DG. Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. Mol Syst Biol. 2011 Oct 11;7:539. doi: 10.1038/msb.2011.75. PMID: 21988835; PMCID: PMC3261699.
 8. Mirdita, M., Schütze, K., Moriwaki, Y. et al. ColabFold: making protein folding accessible to all. Nat Methods 19, 679–682 (2022). https://doi.org/10.1038/s41592-022-01488-1
 9. Jumper, J., Evans, R., Pritzel, A. et al. Highly accurate protein structure prediction with AlphaFold. Nature 596, 583–589 (2021). https://doi.org/10.1038/s41586-021-03819-2
-
-***#TODO: citations***
